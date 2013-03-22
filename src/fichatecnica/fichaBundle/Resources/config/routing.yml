@@ -1,0 +1,7 @@
+ficha_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: fichaBundle:Default:index }
+
+ficha_lista:
+    pattern:  /ficha
+    defaults: { _controller: fichaBundle:Default:verdatos }

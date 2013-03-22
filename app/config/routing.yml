@@ -1,0 +1,4 @@
+ficha:
+    resource: "@fichaBundle/Resources/config/routing.yml"
+    prefix:   /
+
