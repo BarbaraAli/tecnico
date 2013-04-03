@@ -1,9 +1,0 @@
-{%for fichatecnica in ficha%}
-<p>Número de Ficha: {{fichatecnica.id}}</p>
-<p>Fecha: {{fichatecnica.fecha|date("d/m/Y")}}</p>
-<p>Solicitado por: {{fichatecnica.solicitado}}</p>
-<p>Dependencia: {{fichatecnica.dependencia}}</p>
-<p>Observaciones: {{fichatecnica.observaciones}}</p>
-<p>Realizado por: {{fichatecnica.realizadopor}}</p>
-<p>Firma de entrega: {{fichatecnica.firmadopor}}</p>
-{%endfor%}

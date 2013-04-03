@@ -1,0 +1,13 @@
+/nbproject/private/
+# Bootstrap
+app/*bootstrap
+
+# Directorios de Symfony
+vendedor/*
+*/Logs/*
+*/Cache/*
+web/uploads/*
+web/paquetes/*
+
+# Archivos de configuración
+app/config/parameters.ini
