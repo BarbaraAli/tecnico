@@ -34,10 +34,9 @@ class componentes
      * @ORM\Column(name="numpatri", type="integer", nullable=true)
      */
     private $numpatri;
-   public function __toString() {
-        return $this->desccomp;
-    }
+   
  
+    
      /**
      * @ORM\ManyToOne(targetEntity="tipocomponente", inversedBy="componentes")
      * @ORM\JoinColumn(name="componente_id", referencedColumnName="id")
@@ -100,28 +99,5 @@ class componentes
     public function getNumpatri()
     {
         return $this->numpatri;
-    }
-
-    /**
-     * Set tipocomponente
-     *
-     * @param \fichatecnica\fichaBundle\Entity\tipocomponente $tipocomponente
-     * @return componentes
-     */
-    public function setTipocomponente(\fichatecnica\fichaBundle\Entity\tipocomponente $tipocomponente = null)
-    {
-        $this->tipocomponente = $tipocomponente;
-    
-        return $this;
-    }
-
-    /**
-     * Get tipocomponente
-     *
-     * @return \fichatecnica\fichaBundle\Entity\tipocomponente 
-     */
-    public function getTipocomponente()
-    {
-        return $this->tipocomponente;
     }
 }

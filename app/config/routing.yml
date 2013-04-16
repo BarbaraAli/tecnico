@@ -1,4 +1,5 @@
 ficha:
-    resource: "@fichaBundle/Resources/config/routing.yml"
+    resource: "@fichaBundle/Controller/"
+    type: annotation
     prefix:   /
 

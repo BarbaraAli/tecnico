@@ -29,15 +29,6 @@ class ficha
      * @ORM\Column(name="fecha", type="date")
      */
     private $fecha;
-    
-    /**
-     * @ORM\ManyToOne(targetEntity="dependencias", inversedBy="ficha")
-     * @ORM\JoinColumn(name="dependencias_id", referencedColumnName="id")
-     */
-    private $dependencia;
-    public function __toString() {
-        return $this->dependencia;
-    }
 
     /**
      * @var string
@@ -45,6 +36,13 @@ class ficha
      * @ORM\Column(name="solicitado", type="string", length=255)
      */
     private $solicitado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="dependencia", type="string", length=255)
+     */
+    private $dependencia;
 
     /**
      * @var string
@@ -72,7 +70,7 @@ class ficha
     /**
      * @var string
      *
-     * @ORM\Column(name="actsimple", type="string", length=100, nullable=true)
+     * @ORM\Column(name="actsimple", type="string", length=100)
      */
     private $actsimple;
     
@@ -130,8 +128,6 @@ class ficha
     {
         return $this->id;
     }
-
-    
 
     /**
      * Set fecha
@@ -394,60 +390,5 @@ class ficha
     public function getTipot()
     {
         return $this->tipot;
-    }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->bien = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->componentes = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->tipot = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-    
-    /**
-     * Set actsimple
-     *
-     * @param string $actsimple
-     * @return ficha
-     */
-    public function setActsimple($actsimple)
-    {
-        $this->actsimple = $actsimple;
-    
-        return $this;
-    }
-
-    /**
-     * Get actsimple
-     *
-     * @return string 
-     */
-    public function getActsimple()
-    {
-        return $this->actsimple;
-    }
-
-    /**
-     * Add tipot
-     *
-     * @param \fichatecnica\fichaBundle\Entity\tipotrabajo $tipot
-     * @return ficha
-     */
-    public function addTipot(\fichatecnica\fichaBundle\Entity\tipotrabajo $tipot)
-    {
-        $this->tipot[] = $tipot;
-    
-        return $this;
-    }
-
-    /**
-     * Remove tipot
-     *
-     * @param \fichatecnica\fichaBundle\Entity\tipotrabajo $tipot
-     */
-    public function removeTipot(\fichatecnica\fichaBundle\Entity\tipotrabajo $tipot)
-    {
-        $this->tipot->removeElement($tipot);
     }
 }

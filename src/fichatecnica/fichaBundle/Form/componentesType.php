@@ -12,7 +12,8 @@ class componentesType extends AbstractType
     {
         $builder
             ->add('desccomp')
-        ;
+            ->add('numpatri')
+                ;
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)

@@ -35,10 +35,6 @@ class bien
      */
     private $numpatrimonio;
 
-    public function __toString() {
-        return $this->descbien;
-    }
-    
     /**
      * Get id
      *
@@ -70,28 +66,5 @@ class bien
     public function getDescbien()
     {
         return $this->descbien;
-    }
-
-    /**
-     * Set numpatrimonio
-     *
-     * @param integer $numpatrimonio
-     * @return bien
-     */
-    public function setNumpatrimonio($numpatrimonio)
-    {
-        $this->numpatrimonio = $numpatrimonio;
-    
-        return $this;
-    }
-
-    /**
-     * Get numpatrimonio
-     *
-     * @return integer 
-     */
-    public function getNumpatrimonio()
-    {
-        return $this->numpatrimonio;
     }
 }

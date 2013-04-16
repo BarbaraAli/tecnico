@@ -20,7 +20,8 @@ class fichaType extends AbstractType
             ->add('bien')
             ->add('componentes')
             ->add('tipot')
-        ;
+            ;
+        
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)

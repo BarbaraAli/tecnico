@@ -5,12 +5,12 @@ namespace fichatecnica\fichaBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * tipotrabajo
+ * tipobien
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="fichatecnica\fichaBundle\Entity\tipotrabajoRepository")
+ * @ORM\Entity(repositoryClass="fichatecnica\fichaBundle\Entity\tipobienRepository")
  */
-class tipotrabajo
+class tipobien
 {
     /**
      * @var integer
@@ -24,14 +24,11 @@ class tipotrabajo
     /**
      * @var string
      *
-     * @ORM\Column(name="desctt", type="string", length=255)
+     * @ORM\Column(name="nombien", type="string", length=100)
      */
-    private $desctt;
+    private $nombien;
 
 
-    public function __toString() {
-        return $this->desctt;
-    }
     /**
      * Get id
      *
@@ -43,25 +40,25 @@ class tipotrabajo
     }
 
     /**
-     * Set desctt
+     * Set nombien
      *
-     * @param string $desctt
-     * @return tipotrabajo
+     * @param string $nombien
+     * @return tipobien
      */
-    public function setDesctt($desctt)
+    public function setNombien($nombien)
     {
-        $this->desctt = $desctt;
+        $this->nombien = $nombien;
     
         return $this;
     }
 
     /**
-     * Get desctt
+     * Get nombien
      *
      * @return string 
      */
-    public function getDesctt()
+    public function getNombien()
     {
-        return $this->desctt;
+        return $this->nombien;
     }
 }

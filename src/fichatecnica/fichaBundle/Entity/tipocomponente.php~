@@ -1,0 +1,68 @@
+<?php
+
+namespace fichatecnica\fichaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * tipocomponente
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="fichatecnica\fichaBundle\Entity\tipocomponenteRepository")
+ */
+class tipocomponente
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descomponente", type="string", length=150)
+     */
+    private $descomponente;
+
+    /**
+     * @ORM\OneToMany(targetEntity="componentes", mappedBy="tipocomponentes")
+     */
+    private $componentes;
+    
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set descomponente
+     *
+     * @param string $descomponente
+     * @return tipocomponente
+     */
+    public function setDescomponente($descomponente)
+    {
+        $this->descomponente = $descomponente;
+    
+        return $this;
+    }
+
+    /**
+     * Get descomponente
+     *
+     * @return string 
+     */
+    public function getDescomponente()
+    {
+        return $this->descomponente;
+    }
+}
