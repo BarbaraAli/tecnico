@@ -1,0 +1,124 @@
+<?php
+
+namespace fichatecnica\fichaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * usuarios
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="fichatecnica\fichaBundle\Entity\usuariosRepository")
+ */
+class usuarios
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nomyape", type="string", length=100)
+     */
+    private $nomyape;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user", type="string", length=100)
+     */
+    private $user;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=100)
+     */
+    private $password;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nomyape
+     *
+     * @param string $nomyape
+     * @return usuarios
+     */
+    public function setNomyape($nomyape)
+    {
+        $this->nomyape = $nomyape;
+    
+        return $this;
+    }
+
+    /**
+     * Get nomyape
+     *
+     * @return string 
+     */
+    public function getNomyape()
+    {
+        return $this->nomyape;
+    }
+
+    /**
+     * Set user
+     *
+     * @param string $user
+     * @return usuarios
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+    
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return string 
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set password
+     *
+     * @param string $password
+     * @return usuarios
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    
+        return $this;
+    }
+
+    /**
+     * Get password
+     *
+     * @return string 
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+}
